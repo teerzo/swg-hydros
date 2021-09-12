@@ -44,7 +44,7 @@ export default function Hydros(props) {
     const [output, setOutput] = useState(0.0);
     const [missing, setMissing] = useState(0.0);
 
-    const [target, setTarget] = useState(83);
+    const [target, setTarget] = useState(83.5);
 
 
     useEffect(() => {
