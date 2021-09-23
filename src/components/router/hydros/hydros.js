@@ -127,8 +127,14 @@ export default function Hydros(props) {
         setTotal(_total + _missing);
     }
 
-    function onReset() {
-
+    function handleResetInput() {
+        setEnzyme({
+            a: 0.0,
+            b: 0.0,
+            c: 0.0,
+            d: 0.0,
+            e: 0.0
+        })
     }
 
     return (
@@ -145,15 +151,19 @@ export default function Hydros(props) {
                             <input type="number" name="target" value={target} onChange={onTargetChange} />
                         </div>
                         <div className="group">
+
                         </div>
                         <div className="group">
+
                         </div>
                         <div className="group">
+
                         </div>
 
-                        {/* <div className="group center">
-                            <button> Reset </button>
-                        </div> */}
+                        <div className="group center">
+                            <label>   </label>
+                            <button onClick={handleResetInput}> Reset </button>
+                        </div>
                     </div>
 
 
@@ -161,26 +171,26 @@ export default function Hydros(props) {
                     <div className="grid">
                         <div className="group">
                             <h3> Input </h3>
-                            <p> Your hydros </p>
+                            <p> Your Elements </p>
                         </div>
                         <div className="group">
-                            <label> Enzyme A </label>
+                            <label> Element A </label>
                             <input type="number" name="a" value={enzyme.a} onChange={handleChange} />
                         </div>
                         <div className="group">
-                            <label> Enzyme B </label>
+                            <label> Element B </label>
                             <input type="number" name="b" value={enzyme.b} onChange={handleChange} />
                         </div>
                         <div className="group">
-                            <label> Enzyme C </label>
+                            <label> Element C </label>
                             <input type="number" name="c" value={enzyme.c} onChange={handleChange} />
                         </div>
                         <div className="group">
-                            <label> Enzyme D </label>
+                            <label> Element D </label>
                             <input type="number" name="d" value={enzyme.d} onChange={handleChange} />
                         </div>
                         <div className="group">
-                            <label> Enzyme E </label>
+                            <label> Element E </label>
                             <input type="number" name="e" value={enzyme.e} onChange={handleChange} />
                         </div>
 
@@ -217,26 +227,26 @@ export default function Hydros(props) {
                     <div className="grid">
                         <div className="group">
                             <h3> Suggested </h3>
-                            <p> Missing hydros </p>
+                            <p> Missing Elements </p>
                         </div>
                         <div className="group">
-                            <label> Suggest A </label>
+                            <label> Element A </label>
                             <input className={suggest.a > 0 ? 'red' : ''} type="number" name="a" value={suggest.a} onChange={suggestChange} />
                         </div>
                         <div className="group">
-                            <label> Suggest B </label>
+                            <label> Element B </label>
                             <input className={suggest.b > 0 ? 'red' : ''} type="number" name="b" value={suggest.b} onChange={suggestChange} />
                         </div>
                         <div className="group">
-                            <label> Suggest C </label>
+                            <label> Element C </label>
                             <input className={suggest.c > 0 ? 'red' : ''} type="number" name="c" value={suggest.c} onChange={suggestChange} />
                         </div>
                         <div className="group">
-                            <label> Suggest D </label>
+                            <label> Element D </label>
                             <input className={suggest.d > 0 ? 'red' : ''} type="number" name="d" value={suggest.d} onChange={suggestChange} />
                         </div>
                         <div className="group">
-                            <label> Suggest E </label>
+                            <label> Element E </label>
                             <input className={suggest.e > 0 ? 'red' : ''} type="number" name="e" value={suggest.e} onChange={suggestChange} />
                         </div>
                     </div>

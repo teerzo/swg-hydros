@@ -1,11 +1,7 @@
-
-
 .route-hydros {
     text-align: center;
     // height: 100vh;
     // height: calc(100vh - 4rem);
-
-
 
     p {
         margin: 0px;
@@ -17,11 +13,29 @@
     .overlay {
         padding: 10px;
         background-color: rgba($color: #ffffff, $alpha: 0.9);
-    }   
+    }
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         padding: 10px;
+
+        @media only screen and (max-width: 1500px) {
+            // background-color: lightblue;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+        @media only screen and (max-width: 1000px) {
+            // background-color: lightblue;
+            grid-template-columns: 1fr;
+
+            .group {
+                text-align: center;
+            }
+            input {
+                margin: 0 auto;
+            }
+        }
+
 
         .group:nth-child(1) {
             margin-left: 30px;
@@ -38,7 +52,6 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-evenly;
-        
         }
     }
 
@@ -63,7 +76,7 @@
             min-width: 150px;
             font-size: 20px;
             // margin-bottom: 20px;
-            padding: 10px;
+            padding: 5px;
             margin: 0 auto;
         }
 
@@ -71,7 +84,6 @@
             text-align: center;
         }
     }
-
 
     .green {
         color: green;
