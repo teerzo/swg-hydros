@@ -59,6 +59,7 @@ export default function Hydros(props) {
     function handleChange(e) {
         const { name, value } = e.target;
         console.log('handleChange', name, value);
+        value = value.replace(/\D/g,'');
         setEnzyme(enzyme => ({ ...enzyme, [name]: value }));
     }
 
@@ -71,6 +72,7 @@ export default function Hydros(props) {
     function onTargetChange(e) {
         const { name, value } = e.target;
         console.log('handleChange', name, value);
+        value = value.replace(/\D/g,'');
         setTarget(value);
     }
 
