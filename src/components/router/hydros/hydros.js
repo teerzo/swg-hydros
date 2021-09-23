@@ -15,11 +15,17 @@ export default function Hydros(props) {
     )
 
     const [enzyme, setEnzyme] = useState({
-        a: 0.0,
-        b: 0.0,
-        c: 0.0,
-        d: 0.0,
-        e: 0.0
+        a: '',
+        b: '',
+        c: '',
+        d: '',
+        e: ''
+
+        // a: 0.0,
+        // b: 0.0,
+        // c: 0.0,
+        // d: 0.0,
+        // e: 0.0
 
         // a: 17.45,
         // b: 14.96,
@@ -131,11 +137,11 @@ export default function Hydros(props) {
 
     function handleResetInput() {
         setEnzyme({
-            a: 0.0,
-            b: 0.0,
-            c: 0.0,
-            d: 0.0,
-            e: 0.0
+            a: '',
+            b: '',
+            c: '',
+            d: '',
+            e: ''
         })
     }
 
