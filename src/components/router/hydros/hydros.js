@@ -204,7 +204,7 @@ export default function Hydros(props) {
                             <p className={realTotal >= target ? 'green' : 'red'}> <b> {realTotal.toFixed(2)} </b> </p>
                         </div>
                         <div className="group">
-                            <p> Input total %: </p>
+                            <p> Input Average: </p>
                             <p className={realTotal >= target ? 'green' : 'red'}>  <b> {realOutput.toFixed(2)}% </b></p>
                         </div>
                     </div>
@@ -266,7 +266,7 @@ export default function Hydros(props) {
                         </div>
 
                         <div className="group">
-                            <p> Total %</p>
+                            <p> Total Average</p>
                             <p className={realTotal >= target ? 'green' : 'orange'}>  <b> {output.toFixed(2)}% </b></p>
                         </div>
                     </div>
