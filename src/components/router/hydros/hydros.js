@@ -54,12 +54,15 @@ export default function Hydros(props) {
 
 
     useEffect(() => {
+        getTarget();
         calculate();
     }, [])
 
     useEffect(() => {
         calculate();
     }, [enzyme, target])
+
+
 
 
     function handleChange(e) {
@@ -80,6 +83,18 @@ export default function Hydros(props) {
         console.log('handleChange', name, value);
         // value = value.replace(/\D/g,'');
         setTarget(value);
+        saveTarget(value);
+    }
+
+    function saveTarget(value) {
+        localStorage.setItem('swg-hydros target', value);
+    }
+
+    function getTarget() {
+        const value = localStorage.getItem('swg-hydros target');
+        if( value) {
+            setTarget(value);
+        }
     }
 
 
