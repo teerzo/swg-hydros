@@ -19,10 +19,16 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         padding: 10px;
 
+        .group:nth-child(1) {
+            margin-left: 30px;
+        }
+
         @media only screen and (max-width: 1500px) {
             // background-color: lightblue;
             grid-template-columns: 1fr 1fr 1fr;
-
+            .group:nth-child(1) {
+                margin-left: 0px;
+            }
         }
         @media only screen and (max-width: 1000px) {
             // background-color: lightblue;
@@ -33,13 +39,15 @@
             }
             input {
                 margin: 0 auto;
+                width: 100%;
+            }
+            .group:nth-child(1) {
+                margin-left: 0px;
             }
         }
 
 
-        .group:nth-child(1) {
-            margin-left: 30px;
-        }
+        
     }
 
     .grid:nth-child(odd) {
